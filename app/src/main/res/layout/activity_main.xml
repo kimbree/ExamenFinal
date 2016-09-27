@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.pedro.com.examenfinal.MainActivity"
+    android:background="@android:color/holo_orange_dark">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Examen Final NEXT UNIVERSITY"
+        android:layout_marginTop="10dp"
+        android:textStyle="normal|bold"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:id="@+id/textView1"
+        android:layout_alignParentTop="true"/>
+
+    <!--youtube-->
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/youtube"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true" />
+
+    <!--Facebook-->
+    <com.facebook.login.widget.LoginButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/loginButton"
+        android:layout_marginTop="41dp"
+        android:layout_below="@+id/youtube"
+        android:layout_centerHorizontal="true" />
+
+    <!--Google-->
+    <LinearLayout
+        android:id="@+id/perfil_iniciado"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:layout_below="@+id/perfil_finalizado"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/usuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textSize="16dp"/>
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:onClick="logout"
+            android:text="Fin de Sesión"
+            android:textSize="18dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/perfil_finalizado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:layout_below="@+id/loginButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp">
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/googleplus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+
+
+    <!--ADS-->
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id" />
+
+</RelativeLayout>

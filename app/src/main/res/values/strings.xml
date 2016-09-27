@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ExamenFinal</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="banner_ad_unit_id">ca-app-pub-2198105674487962/4122277735</string>
+
+    <string name="facebook_app_id">1649853931991479</string>
+
+    <string name="Error_Reproduccion">Error en la reproduccion.</string>
+</resources>
